@@ -83,6 +83,38 @@ php artisan serve
 
 
 
+### Read All Menu
+* Url : /menus
+* Method : GET
+
+### Read All Menu for the specific vendor
+* Url : /menu/{vendorId}
+* Method : GET
+
+### Read One Menu for the specific vendor
+* Url : /menu/{vendorId}/{menuId}
+* Method : GET
 
 
+### Read All Order
+* Url : /order
+* Method : GET
 
+
+### Create Order
+* Url : /order
+* Method : POST
+* Body :
+
+```json
+{
+	"total_order": "50000",
+	"user_id": "1",
+	"message": "Extra nasi dan sambal",
+	"detail" :
+        [
+            { "order_id" : 1, "menu_id": 5, "price":2500, "quantity":2},
+            { "order_id" : 1, "menu_id": 10, "price":4000, "quantity":3}
+	    ]
+}
+```
