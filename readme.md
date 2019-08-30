@@ -1,4 +1,6 @@
-<h2>Vertilogic - Backend Test</h2>
+<p align="center">
+    <h1 align="center">Vertilogic - Backend Test</h1>
+</p>
 
 ### Built With
 * [Laravel](https://laravel.com/)
