@@ -36,7 +36,10 @@ open this directory on cmd and write composer install
 ```bash
 php artisan migrate:fresh --seed
 ```
-
+* generate app key
+```bash
+php artisan key:generate
+```
 * start the server
 
 ```bash
