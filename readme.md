@@ -118,8 +118,8 @@ php artisan serve
 	"message": "Extra nasi dan sambal",
 	"detail" :
         [
-            { "order_id" : 1, "menu_id": 5, "price":2500, "quantity":2},
-            { "order_id" : 1, "menu_id": 10, "price":4000, "quantity":3}
+            { "order_id" : 1, "menu_id": 1, "price":2500, "quantity":2},
+            { "order_id" : 1, "menu_id": 2, "price":4000, "quantity":3}
 	    ]
 }
 ```
