@@ -17,15 +17,15 @@ class VendorsController extends Controller
 
         if(!empty($tag)){
                 
-            $vendor = Vendor::with('tags')->whereHas('tags', function($q) use ($tag){
-                        $q->whereIn('tags.name',$tag);
-                    }, '=', count($tag));
+            $vendor = Vendor::with('tags')->whereHas('tags', 
+                        function($q) use ($tag){
+                            $q->whereIn('tags.name',$tag);
+                        }, '=', count($tag));
 
             $vendor= VendorResource::collection($vendor->orderBy('id','DESC')->paginate(10));
         }else{
             $vendor = VendorResource::collection(Vendor::with('tags')->orderBy('id','DESC')->paginate(10));
         }
-
         return $vendor;
     }
 
@@ -55,7 +55,7 @@ class VendorsController extends Controller
     
     public function show($idVendor)
     {
-        $data =  Vendor::with('tags')->findOrFail($idVendor);
+        $data = new  VendorResource(Vendor::with('tags')->findOrFail($idVendor));
         return response()->json([
             'data' => $data
         ], 200);

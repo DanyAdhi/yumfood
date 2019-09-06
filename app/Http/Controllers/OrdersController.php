@@ -14,7 +14,7 @@ class OrdersController extends Controller
     
     public function index()
     {
-        $order = OrderResource::collection(Order::with(['detail_order', 'detail_order.menus'])->get());
+        $order = OrderResource::collection(Order::with(['detail_order.menus'])->get());
         return $order;
     }
 

@@ -11,7 +11,7 @@ class VendorSeeder extends Seeder
      */
     public function run()
     {
-        factory(\App\Vendor::class, 50)->states([
+        factory(\App\Vendor::class, 25)->states([
             'random-cost',
             'randoms-cuisine',
             'is-halal',

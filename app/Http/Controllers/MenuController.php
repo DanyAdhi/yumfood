@@ -24,7 +24,7 @@ class MenuController extends Controller
 
     public function show($idVendor, $idMenu)
     {
-        $data = Menu::with('vendor')->where('vendor_id', $idVendor)->findOrFail($idMenu);
+        $data = new MenuResource(Menu::with('vendor')->where('vendor_id', $idVendor)->findOrFail($idMenu));
         return response()->json([
             'data' => $data
         ], 200);

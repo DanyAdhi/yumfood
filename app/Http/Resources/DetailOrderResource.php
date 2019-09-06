@@ -12,7 +12,7 @@ class DetailOrderResource extends JsonResource
         return [
             'price'     => $this->price,
             'quantity'  => $this->quantity,
-            'menu_id'   => $this->menu_id,
+            'menu'   	=> $this->menus->menu_name,
         ];
     }
 }
